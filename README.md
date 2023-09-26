@@ -1,6 +1,7 @@
 # e_learning
 
 A new Flutter project.
+author: Jayaraj Chippada
 
 ## Getting Started
 
