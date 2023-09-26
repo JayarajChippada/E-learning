@@ -1,2 +1,2 @@
 # E-learning
-A user friendly mobile application developed by using flutter
+A user friendly mobile application built with the Flutter Framework.
