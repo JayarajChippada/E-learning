@@ -1,4 +1,4 @@
-import 'package:e_learning/screens/splash_screen.dart';
+import 'package:e_learning/welcome_screens/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {

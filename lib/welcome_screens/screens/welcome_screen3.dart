@@ -1,7 +1,12 @@
+import 'package:e_learning/authentication/screens/signup_screen.dart';
+import 'package:e_learning/welcome_screens/screens/welcome_screen1.dart';
+import 'package:e_learning/welcome_screens/screens/welcome_screen2.dart';
+import 'package:e_learning/welcome_screens/widgets/bubbles.dart';
+import 'package:e_learning/welcome_screens/widgets/circlur_button.dart';
 import "package:flutter/material.dart";
 
-class WelcomeScreen1 extends StatelessWidget {
-  const WelcomeScreen1({super.key});
+class WelcomeScreen3 extends StatelessWidget {
+  const WelcomeScreen3({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,19 +37,19 @@ class WelcomeScreen1 extends StatelessWidget {
                 )
               ],
             ),
-            Image.asset("assets/images/onboarding1.png"),
             Column(
               children: [
+                Image.asset("assets/images/onboarding3.png"),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
                     Text(
-                      "Discover Your",
+                      "Achieve",
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
                     ),
                     Text(
-                      ' Learning',
+                      ' Certification',
                       style: TextStyle(
                           color: Colors.orange,
                           fontSize: 28,
@@ -53,24 +58,26 @@ class WelcomeScreen1 extends StatelessWidget {
                   ],
                 ),
                 const Text(
-                  'Adventure',
+                  'with Ease',
                   style: TextStyle(
                       color: Colors.orange,
                       fontSize: 28,
                       fontWeight: FontWeight.bold),
-                )
-              ],
-            ),
-            Column(
-              children: const [
-                Text(
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                const Text(
                   "Lorem ipsum dolor sit amet, consectetur",
                   style: TextStyle(
                       fontWeight: FontWeight.w600,
                       color: Color(0xFF797979),
                       fontSize: 16),
                 ),
-                Text(
+                const SizedBox(
+                  height: 1,
+                ),
+                const Text(
                   "adipiscing elit, sed do elusmod tempor",
                   style: TextStyle(
                       fontWeight: FontWeight.w600,
@@ -80,55 +87,33 @@ class WelcomeScreen1 extends StatelessWidget {
               ],
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
-                  children: [
-                    Container(
-                      height: 13,
-                      width: 13,
-                      decoration: const BoxDecoration(
-                          color: Colors.orange,
-                          borderRadius:
-                              BorderRadius.all(Radius.circular(100))),
-                    ),
-                    const SizedBox(
-                      width: 5,
-                    ),
-                    Container(
-                      height: 10,
-                      width: 10,
-                      decoration: BoxDecoration(
-                          color: Colors.orange.shade200,
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(100))),
-                    ),
-                    const SizedBox(
-                      width: 5,
-                    ),
-                    Container(
-                      height: 10,
-                      width: 10,
-                      decoration: BoxDecoration(
-                          color: Colors.orange.shade200,
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(100))),
-                    ),
-                  ],
+                CircularButton(
+                  color: Colors.white,
+                  icon: Icons.arrow_back,
+                  borderColor: const Color(0xFF0961F5),
+                  iconColor: const Color(0xFF0961F5),
+                  callback: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const WelcomeScreen2()));
+                  },
                 ),
-                const SizedBox(width: 80,),
-                Container(
-                  height: 50,
-                  width: 50,
-                  decoration: const BoxDecoration(
-                      color: Color(0xFF0961F5),
-                      borderRadius: BorderRadius.all(Radius.circular(100))),
-                  child: const Icon(
-                    Icons.arrow_forward,
-                    color: Colors.white,
-                    size: 30,
-                  ),
-                )
+                const Bubbles(val: 3),
+                CircularButton(
+                  color: const Color(0xFF0961F5),
+                  icon: Icons.arrow_forward,
+                  borderColor: const Color(0xFF0961F5),
+                  iconColor: Colors.white,
+                  callback: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>  SignUpScreen()));
+                  },
+                ),
               ],
             ),
           ],

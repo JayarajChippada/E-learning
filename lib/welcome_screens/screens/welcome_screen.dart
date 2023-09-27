@@ -1,5 +1,5 @@
-import 'package:e_learning/screens/welcome_screen1.dart';
-import 'package:e_learning/widgets/button.dart';
+import 'package:e_learning/welcome_screens/screens/welcome_screen1.dart';
+import 'package:e_learning/welcome_screens/widgets/button.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -118,7 +118,7 @@ class WelcomeScreen extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => WelcomeScreen1()));
+                                builder: (context) => const WelcomeScreen1()));
                       },),
                     const SizedBox(
                       height: 30,
