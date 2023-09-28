@@ -1,3 +1,4 @@
+import 'package:e_learning/authentication/screens/password_screen.dart';
 import 'package:e_learning/authentication/screens/signup_screen.dart';
 import 'package:e_learning/authentication/widgets/textfield.dart';
 import 'package:e_learning/welcome_screens/widgets/button.dart';
@@ -100,7 +101,13 @@ class _SignInScreenState extends State<SignInScreen> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const PasswordScreen(),
+                          ));
+                    },
                     child: const Text(
                       "Forgot Password?",
                       style: TextStyle(

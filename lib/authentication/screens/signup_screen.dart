@@ -1,3 +1,4 @@
+import 'package:e_learning/authentication/screens/profile_screen.dart';
 import 'package:e_learning/authentication/screens/signin_screen.dart';
 import 'package:e_learning/authentication/screens/verification_screen.dart';
 import 'package:e_learning/authentication/widgets/textfield.dart';
@@ -158,7 +159,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
               const SizedBox(
                 height: 20,
               ),
-              MyButton(text: "Sign Up", callback: () {}),
+              MyButton(text: "Sign Up", callback: () {
+                Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ProfileEditingScreen(),
+                        ));
+              }),
               const SizedBox(
                 height: 30,
               ),
