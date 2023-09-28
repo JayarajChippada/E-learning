@@ -114,12 +114,15 @@ class WelcomeScreen extends StatelessWidget {
                     const SizedBox(
                       height: 40,
                     ),
-                     MyButton(text: "Let's Get Started", callback: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const WelcomeScreen1()));
-                      },),
+                     Container(
+                      margin: const EdgeInsets.symmetric(horizontal: 20),
+                       child: MyButton(text: "Let's Get Started", callback: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const WelcomeScreen1()));
+                        },),
+                     ),
                     const SizedBox(
                       height: 30,
                     ),

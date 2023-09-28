@@ -9,7 +9,7 @@ class MyButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      margin: const EdgeInsets.symmetric(horizontal: 20),
+      //margin: const EdgeInsets.symmetric(horizontal: 20),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           backgroundColor: const Color(0xFF0961F5), // Background color of the button
