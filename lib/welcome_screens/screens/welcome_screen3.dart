@@ -1,4 +1,4 @@
-import 'package:e_learning/authentication/screens/signup_screen.dart';
+import 'package:e_learning/authentication/screens/signin_screen.dart';
 import 'package:e_learning/welcome_screens/screens/welcome_screen1.dart';
 import 'package:e_learning/welcome_screens/screens/welcome_screen2.dart';
 import 'package:e_learning/welcome_screens/widgets/bubbles.dart';
@@ -111,7 +111,7 @@ class WelcomeScreen3 extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) =>  SignUpScreen()));
+                            builder: (context) => const SignInScreen()));
                   },
                 ),
               ],

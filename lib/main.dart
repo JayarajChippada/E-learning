@@ -13,7 +13,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'E Learning Mobile App',
       theme: ThemeData(
-        
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
