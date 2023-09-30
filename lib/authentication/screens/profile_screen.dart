@@ -1,4 +1,5 @@
 import 'package:e_learning/authentication/screens/signup_screen.dart';
+import 'package:e_learning/home/widgets/bottombar.dart';
 import 'package:flutter/material.dart';
 
 import '../../welcome_screens/widgets/button.dart';
@@ -17,6 +18,7 @@ class _ProfileEditingScreenState extends State<ProfileEditingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
@@ -176,7 +178,13 @@ class _ProfileEditingScreenState extends State<ProfileEditingScreen> {
                   const SizedBox(
                     height: 40,
                   ),
-                  MyButton(text: "Complete Profile", callback: () {}),
+                  MyButton(text: "Complete Profile", callback: () {
+                    Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const MyBottomBar(),
+                            ));
+                  }),
                 ],
               ),
             ),
