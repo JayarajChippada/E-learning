@@ -1,4 +1,5 @@
 import 'package:e_learning/home/screens/home_screen.dart';
+import 'package:e_learning/home/screens/mycourses_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:unicons/unicons.dart';
 
@@ -11,21 +12,18 @@ class MyBottomBar extends StatefulWidget {
 }
 
 class _MyBottomBarState extends State<MyBottomBar> {
-  static const List<Widget> _pages = [
+  final List<Widget> _pages = [
     HomeScreen(),
-    Icon(
-      UniconsLine.book_open,
-      color: Colors.blue,
-    ),
-    Icon(
+    const CoursesScreen(),
+    const Icon(
       UniconsLine.cloud_bookmark,
       color: Colors.blue,
     ),
-    Icon(
+    const Icon(
       UniconsLine.chat_info,
       color: Colors.blue,
     ),
-    Icon(
+    const Icon(
       UniconsLine.user,
       color: Colors.blue,
     ),

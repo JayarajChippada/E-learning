@@ -1,5 +1,6 @@
 import 'package:e_learning/authentication/screens/password_screen.dart';
 import 'package:e_learning/authentication/screens/profile_screen.dart';
+import 'package:e_learning/home/widgets/bottombar.dart';
 import 'package:e_learning/welcome_screens/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 

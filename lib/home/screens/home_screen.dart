@@ -1,9 +1,34 @@
+import 'package:e_learning/home/widgets/card.dart';
 import 'package:e_learning/home/widgets/category.dart';
+import 'package:e_learning/home/widgets/course.dart';
+import 'package:e_learning/home/widgets/mentor.dart';
 import 'package:e_learning/home/widgets/search_bar.dart';
+import 'package:e_learning/pages/category_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  HomeScreen({super.key});
+  List<String> courseImages = [
+    "assets/images/course2.jpeg",
+    "assets/images/course2.jpeg",
+    "assets/images/course2.jpeg",
+    "assets/images/course2.jpeg",
+  ];
+
+  List<dynamic> categories = [
+    {'icon': Icons.draw_sharp, 'title': "Art"},
+    {'icon': Icons.code, 'title': "Coding"},
+    //{'icon': Icons.account_balance_outlined, 'title': "Banking"},
+    {'icon': Icons.add_shopping_cart, 'title': "Marketing"},
+    {'icon': Icons.business_center, 'title': "Bussiness"},
+  ];
+
+  List<dynamic> mentors = [
+    {"imageUrl" : "assets/images/mentor4.jpeg", "name": "Phil Ebiner"},
+    {"imageUrl" : "assets/images/mentor1.jpeg", "name": "Angelena Yu"},
+    {"imageUrl" : "assets/images/mentor3.jpeg", "name": "Andrei Neagoie"},
+    {"imageUrl" : "assets/images/mentor2.jpeg", "name": "Tim Buchalka"},
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -107,93 +132,167 @@ class HomeScreen extends StatelessWidget {
           ),
           Expanded(
             child: Container(
-              margin: const EdgeInsets.symmetric(horizontal: 20),
               color: Colors.white,
               child: ListView(
                 children: [
-                  const SizedBox(height: 10,),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children:const [
-                      Text(
-                        "Categories",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 19,
-                          color: Colors.black
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children:  [
+                        const Text(
+                          "Categories",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 19,
+                              color: Colors.black),
                         ),
-                      ),
-                      Text(
-                        "See all",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 17,
-                            color: Colors.orange),
-                      ),
-                    ],
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>  CategoryScreen(),
+                            ));
+                          },
+                          child: const Text(
+                            "See all",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 17,
+                                color: Colors.orange),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: categories
+                        .map((obj) =>
+                            MyCategory(icon: obj['icon'], title: obj['title']))
+                        .toList(),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        Text(
+                          "Popular Courses",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 19,
+                              color: Colors.black),
+                        ),
+                        Text(
+                          "See all",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 17,
+                              color: Colors.orange),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    padding: const EdgeInsets.only(left: 6),
+                    child: Row(
+                      children: courseImages
+                          .map((image) => MyCourse(imageUrl: image))
+                          .toList(),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        Text(
+                          "Top Mentor",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 19,
+                              color: Colors.black),
+                        ),
+                        Text(
+                          "See all",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 17,
+                              color: Colors.orange),
+                        ),
+                      ],
+                    ),
                   ),
                   const SizedBox(
                     height: 20,
                   ),
                   Row(
-                    children: [
-                      MyCategory(imageUrl: "assets/images/course2.jpeg")
-                    ],
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: mentors
+                        .map((obj) =>
+                            MyMentor(imageUrl: obj['imageUrl'], name: obj['name']))
+                        .toList(),
                   ),
                   const SizedBox(
                     height: 20,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      Text(
-                        "Top Mentor",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 19,
-                            color: Colors.black),
-                      ),
-                      Text(
-                        "See all",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 17,
-                            color: Colors.orange),
-                      ),
-                    ],
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        Text(
+                          "Continue Learning",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 19,
+                              color: Colors.black),
+                        ),
+                        Text(
+                          "See all",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 17,
+                              color: Colors.orange),
+                        ),
+                      ],
+                    ),
                   ),
                   const SizedBox(
                     height: 20,
                   ),
-                  Row(),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      Text(
-                        "Continue Learning",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 19,
-                            color: Colors.black),
-                      ),
-                      Text(
-                        "See all",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 17,
-                            color: Colors.orange),
-                      ),
-                    ],
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 20),
+                    child: const MyCard(
+                      imageUrl: "assets/images/course2.jpeg",
+                      label: "Design",
+                      title: "Introduction to Figma",
+                      mentor: "Phil Ebiner",
+                    ),
                   ),
                   const SizedBox(
-                    height: 20,
+                    height: 30,
                   ),
-                  Row(),
                 ],
-              ),    
+              ),
             ),
           ),
         ],
