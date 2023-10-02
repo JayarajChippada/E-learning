@@ -41,20 +41,23 @@ class CategoryScreen extends StatelessWidget {
             const SizedBox(height: 70,),
             Row(
               children: [
-                CircularButton(
-                    color: Colors.white,
-                    icon: Icons.arrow_back,
-                    iconColor: Colors.black,
-                    borderColor: Colors.grey,
-                    callback: (() {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const MyBottomBar(),
-                          ));
-                    })),
+                Transform.scale(
+                  scale: 0.8,
+                  child: CircularButton(
+                      color: Colors.white,
+                      icon: Icons.arrow_back,
+                      iconColor: Colors.black,
+                      borderColor: Colors.grey,
+                      callback: (() {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const MyBottomBar(),
+                            ));
+                      })),
+                ),
                 const SizedBox(
-                  width: 80,
+                  width: 50,
                 ),
                 const Center(
                   child: Text(
@@ -74,7 +77,7 @@ class CategoryScreen extends StatelessWidget {
                 ),
                 itemCount: categories.length,
                 itemBuilder: (context, index) {
-                  return MyCategory(icon: categories[index]['icon'], title: categories[index]['title']);
+                  return FittedBox(child: MyCategory(icon: categories[index]['icon'], title: categories[index]['title']));
                 },
               ),
             )

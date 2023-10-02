@@ -53,7 +53,7 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   //const Spacer(),
                   const SizedBox(
-                    height: 30,
+                    height: 10,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -123,9 +123,9 @@ class HomeScreen extends StatelessWidget {
                       )
                     ],
                   ),
-                  const SizedBox(
-                    height: 20,
-                  )
+                  // const SizedBox(
+                  //   height: 10,
+                  // )
                 ],
               ),
             ),
