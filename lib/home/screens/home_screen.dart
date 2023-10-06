@@ -4,6 +4,7 @@ import 'package:e_learning/home/widgets/course.dart';
 import 'package:e_learning/home/widgets/mentor.dart';
 import 'package:e_learning/home/widgets/search_bar.dart';
 import 'package:e_learning/pages/category_screen.dart';
+import 'package:e_learning/pages/course_details_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -24,10 +25,10 @@ class HomeScreen extends StatelessWidget {
   ];
 
   List<dynamic> mentors = [
-    {"imageUrl" : "assets/images/mentor4.jpeg", "name": "Phil Ebiner"},
-    {"imageUrl" : "assets/images/mentor1.jpeg", "name": "Angelena Yu"},
-    {"imageUrl" : "assets/images/mentor3.jpeg", "name": "Andrei Neagoie"},
-    {"imageUrl" : "assets/images/mentor2.jpeg", "name": "Tim Buchalka"},
+    {"imageUrl": "assets/images/mentor4.jpeg", "name": "Phil Ebiner"},
+    {"imageUrl": "assets/images/mentor1.jpeg", "name": "Angelena Yu"},
+    {"imageUrl": "assets/images/mentor3.jpeg", "name": "Andrei Neagoie"},
+    {"imageUrl": "assets/images/mentor2.jpeg", "name": "Tim Buchalka"},
   ];
 
   @override
@@ -142,7 +143,7 @@ class HomeScreen extends StatelessWidget {
                     margin: const EdgeInsets.symmetric(horizontal: 20),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children:  [
+                      children: [
                         const Text(
                           "Categories",
                           style: TextStyle(
@@ -155,8 +156,8 @@ class HomeScreen extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) =>  CategoryScreen(),
-                            ));
+                                  builder: (context) => CategoryScreen(),
+                                ));
                           },
                           child: const Text(
                             "See all",
@@ -247,8 +248,8 @@ class HomeScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: mentors
-                        .map((obj) =>
-                            MyMentor(imageUrl: obj['imageUrl'], name: obj['name']))
+                        .map((obj) => MyMentor(
+                            imageUrl: obj['imageUrl'], name: obj['name']))
                         .toList(),
                   ),
                   const SizedBox(
@@ -281,11 +282,23 @@ class HomeScreen extends StatelessWidget {
                   ),
                   Container(
                     margin: const EdgeInsets.symmetric(horizontal: 20),
-                    child: const MyCard(
+                    child: MyCard(
                       imageUrl: "assets/images/course2.jpeg",
                       label: "Design",
                       title: "Introduction to Figma",
                       mentor: "Phil Ebiner",
+                      ontap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => CourseDetailsScreen(
+                        aboutCourse: '',
+                        imageUrl: '',
+                        label: '',
+                        mentor: '',
+                        title: '',
+                      ),)
+                        );
+                      },
                     ),
                   ),
                   const SizedBox(

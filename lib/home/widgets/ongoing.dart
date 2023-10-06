@@ -1,6 +1,8 @@
 import 'package:e_learning/home/widgets/card.dart';
 import 'package:flutter/material.dart';
 
+import '../../pages/course_details_screen.dart';
+
 class OngoingView extends StatelessWidget {
   OngoingView({super.key});
   List<dynamic> courses = [
@@ -45,6 +47,19 @@ class OngoingView extends StatelessWidget {
               label: courses[index]['label'],
               title: courses[index]['title'],
               mentor: courses[index]['mentor'],
+              ontap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CourseDetailsScreen(
+                        aboutCourse: '',
+                        imageUrl: '',
+                        label: '',
+                        mentor: '',
+                        title: '',
+                      ),
+                    ));
+              },
             ),
           );
         },
