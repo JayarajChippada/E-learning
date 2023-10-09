@@ -1,5 +1,5 @@
 import 'package:e_learning/authentication/screens/signup_screen.dart';
-import 'package:e_learning/home/widgets/bottombar.dart';
+import 'package:e_learning/features/home/widgets/bottombar.dart';
 import 'package:flutter/material.dart';
 
 import '../../welcome_screens/widgets/button.dart';

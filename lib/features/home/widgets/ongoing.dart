@@ -1,7 +1,7 @@
-import 'package:e_learning/home/widgets/card.dart';
+import 'package:e_learning/features/home/widgets/card.dart';
 import 'package:flutter/material.dart';
 
-import '../../pages/course_details_screen.dart';
+import '../../../pages/course_details_screen.dart';
 
 class OngoingView extends StatelessWidget {
   OngoingView({super.key});

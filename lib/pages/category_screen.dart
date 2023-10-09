@@ -1,5 +1,5 @@
-import 'package:e_learning/home/widgets/bottombar.dart';
-import 'package:e_learning/home/widgets/category.dart';
+import 'package:e_learning/features/home/widgets/bottombar.dart';
+import 'package:e_learning/features/home/widgets/category.dart';
 import 'package:e_learning/welcome_screens/widgets/circlur_button.dart';
 import 'package:flutter/material.dart';
 

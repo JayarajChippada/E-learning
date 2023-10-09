@@ -1,8 +1,8 @@
-import 'package:e_learning/home/widgets/card.dart';
-import 'package:e_learning/home/widgets/category.dart';
-import 'package:e_learning/home/widgets/course.dart';
-import 'package:e_learning/home/widgets/mentor.dart';
-import 'package:e_learning/home/widgets/search_bar.dart';
+import 'package:e_learning/features/home/widgets/card.dart';
+import 'package:e_learning/features/home/widgets/category.dart';
+import 'package:e_learning/features/home/widgets/course.dart';
+import 'package:e_learning/features/home/widgets/mentor.dart';
+import 'package:e_learning/features/home/widgets/search_bar.dart';
 import 'package:e_learning/pages/category_screen.dart';
 import 'package:e_learning/pages/course_details_screen.dart';
 import 'package:flutter/material.dart';

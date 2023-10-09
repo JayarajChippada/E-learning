@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:e_learning/home/widgets/ongoing.dart';
+import 'package:e_learning/features/home/widgets/ongoing.dart';
 import 'package:flutter/material.dart';
 
 class CoursesScreen extends StatelessWidget {
