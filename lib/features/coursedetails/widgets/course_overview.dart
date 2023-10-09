@@ -1,4 +1,7 @@
+import 'package:e_learning/features/coursedetails/widgets/about.dart';
+import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:unicons/unicons.dart';
 
 class CourseOverview extends StatelessWidget {
   const CourseOverview({super.key});
@@ -77,15 +80,15 @@ class CourseOverview extends StatelessWidget {
                          Icon(
                           Icons.person,
                           size: 18,
-                          color: Colors.grey,
+                          color: Colors.black,
                         ),
                          SizedBox(
-                          width: 10,
+                          width: 5,
                         ),
                         Text(
                           "Jayaraj",
                           style:  TextStyle(
-                              color: Colors.grey,
+                              color: Colors.black,
                               fontSize: 16,
                               fontWeight: FontWeight.bold),
                         ),
@@ -95,17 +98,17 @@ class CourseOverview extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: const [
                         Icon(
-                          Icons.person,
+                          Icons.video_collection_outlined,
                           size: 18,
-                          color: Colors.grey,
+                          color: Colors.black,
                         ),
                         SizedBox(
-                          width: 10,
+                          width: 5,
                         ),
                         Text(
-                          "Jayaraj",
+                          "Lessons",
                           style: TextStyle(
-                              color: Colors.grey,
+                              color: Colors.black,
                               fontSize: 16,
                               fontWeight: FontWeight.bold),
                         ),
@@ -115,17 +118,17 @@ class CourseOverview extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: const [
                         Icon(
-                          Icons.person,
+                          Icons.badge_outlined,
                           size: 18,
-                          color: Colors.grey,
+                          color: Colors.black,
                         ),
                         SizedBox(
-                          width: 10,
+                          width: 5,
                         ),
                         Text(
-                          "Jayaraj",
+                          "Certificate",
                           style: TextStyle(
-                              color: Colors.grey,
+                              color: Colors.black,
                               fontSize: 16,
                               fontWeight: FontWeight.bold),
                         ),
@@ -157,12 +160,10 @@ class CourseOverview extends StatelessWidget {
             ],
           ),
           
-          Expanded(
+          const Expanded(
             child: TabBarView(
               children: [
-                Center(
-                  child: Text('Content of Tab 1'),
-                ),
+               About(),
 
                 // Content of Tab 2
                 Center(

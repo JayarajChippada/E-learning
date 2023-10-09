@@ -4,7 +4,7 @@ import 'package:e_learning/features/home/widgets/course.dart';
 import 'package:e_learning/features/home/widgets/mentor.dart';
 import 'package:e_learning/features/home/widgets/search_bar.dart';
 import 'package:e_learning/pages/category_screen.dart';
-import 'package:e_learning/pages/course_details_screen.dart';
+import 'package:e_learning/features/coursedetails/screens/course_details_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
