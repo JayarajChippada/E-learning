@@ -1,4 +1,5 @@
 import 'package:e_learning/features/coursedetails/widgets/about.dart';
+import 'package:e_learning/features/coursedetails/widgets/lessons.dart';
 import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:unicons/unicons.dart';
@@ -160,15 +161,13 @@ class CourseOverview extends StatelessWidget {
             ],
           ),
           
-          const Expanded(
+           Expanded(
             child: TabBarView(
               children: [
-               About(),
+               const About(),
 
                 // Content of Tab 2
-                Center(
-                  child: Text('Content of Tab 2'),
-                ),
+                Lessons(),
 
                 // Content of Tab 3
                 Center(
