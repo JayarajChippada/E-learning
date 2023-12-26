@@ -1,11 +1,12 @@
-import 'package:e_learning/authentication/screens/profile_screen.dart';
-import 'package:e_learning/authentication/screens/signin_screen.dart';
-import 'package:e_learning/authentication/screens/verification_screen.dart';
-import 'package:e_learning/authentication/widgets/textfield.dart';
-import 'package:e_learning/welcome_screens/widgets/button.dart';
+import 'package:e_learning/features/auth/screens/profile_screen.dart';
+import 'package:e_learning/features/auth/screens/signin_screen.dart';
+import 'package:e_learning/features/auth/screens/verification_screen.dart';
+import 'package:e_learning/features/auth/widgets/textfield.dart';
+import 'package:e_learning/screens/welcome/widgets/button.dart';
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatefulWidget {
+  static const String routeName = '/sign-up-screen';
   const SignUpScreen({super.key});
 
   @override
@@ -131,11 +132,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Checkbox(value: _isChecked, onChanged: (value) {
-                    setState(() {
+                  Checkbox(
+                    value: _isChecked,
+                    onChanged: (value) {
+                      setState(() {
                         _isChecked = value!;
                       });
-                  },),
+                    },
+                  ),
                   const Text(
                     "Agree with",
                     style: TextStyle(
@@ -159,13 +163,15 @@ class _SignUpScreenState extends State<SignUpScreen> {
               const SizedBox(
                 height: 20,
               ),
-              MyButton(text: "Sign Up", callback: () {
-                Navigator.push(
+              MyButton(
+                  text: "Sign Up",
+                  callback: () {
+                    Navigator.push(
                         context,
                         MaterialPageRoute(
                           builder: (context) => const ProfileEditingScreen(),
                         ));
-              }),
+                  }),
               const SizedBox(
                 height: 30,
               ),
@@ -205,7 +211,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 children: [
                   InkWell(
                     onTap: () {
-                       Navigator.push(
+                      Navigator.push(
                           context,
                           MaterialPageRoute(
                             builder: (context) => const VerificationScreen(),

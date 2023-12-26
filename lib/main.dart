@@ -1,7 +1,5 @@
-import 'package:e_learning/authentication/screens/password_screen.dart';
-import 'package:e_learning/authentication/screens/profile_screen.dart';
-import 'package:e_learning/features/home/widgets/bottombar.dart';
-import 'package:e_learning/welcome_screens/screens/splash_screen.dart';
+import 'package:e_learning/routes.dart';
+import 'package:e_learning/screens/splash/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,7 +17,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home:  const MyBottomBar(),
+      onGenerateRoute: (settings) => generateRoute(settings),
+      home:  const SplashScreen(),
     );
   }
 }

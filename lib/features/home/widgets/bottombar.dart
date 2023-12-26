@@ -1,3 +1,4 @@
+import 'package:e_learning/features/bookmarks/screens/bookmarks.dart';
 import 'package:e_learning/features/home/screens/home_screen.dart';
 import 'package:e_learning/features/home/screens/mycourses_screen.dart';
 import 'package:flutter/material.dart';
@@ -15,10 +16,7 @@ class _MyBottomBarState extends State<MyBottomBar> {
   final List<Widget> _pages = [
     HomeScreen(),
     const CoursesScreen(),
-    const Icon(
-      UniconsLine.cloud_bookmark,
-      color: Colors.blue,
-    ),
+    const BookmarkScreen(),
     const Icon(
       UniconsLine.chat_info,
       color: Colors.blue,

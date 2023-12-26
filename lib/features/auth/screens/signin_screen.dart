@@ -1,11 +1,11 @@
-import 'package:e_learning/authentication/screens/password_screen.dart';
-import 'package:e_learning/authentication/screens/signup_screen.dart';
-import 'package:e_learning/authentication/widgets/textfield.dart';
-import 'package:e_learning/welcome_screens/widgets/button.dart';
+import 'package:e_learning/features/auth/screens/password_screen.dart';
+import 'package:e_learning/features/auth/screens/signup_screen.dart';
+import 'package:e_learning/features/auth/widgets/textfield.dart';
+import 'package:e_learning/screens/welcome/widgets/button.dart';
 import 'package:flutter/material.dart';
 
-
 class SignInScreen extends StatefulWidget {
+  static const String routeName = '/sign-in-screen';
   const SignInScreen({super.key});
 
   @override
@@ -161,22 +161,7 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children:   [
-                  Container( 
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,  // Make the container circular
-                      border: Border.all(
-                        color: Colors.grey,   // Border color
-                        width: 1.5,           // Border width
-                      ),
-                    ),
-                    child: const CircleAvatar(
-                      maxRadius: 25,
-                      backgroundColor: Colors.white,
-                      backgroundImage: AssetImage("assets/images/apple_icon.png",),
-                    ),
-                  ),
-                  const SizedBox(width: 15,),
+                children: [
                   Container(
                     decoration: BoxDecoration(
                       shape: BoxShape.circle, // Make the container circular
@@ -188,8 +173,28 @@ class _SignInScreenState extends State<SignInScreen> {
                     child: const CircleAvatar(
                       maxRadius: 25,
                       backgroundColor: Colors.white,
-                      backgroundImage:
-                          AssetImage("assets/images/google_icon.jpg",),
+                      backgroundImage: AssetImage(
+                        "assets/images/apple_icon.png",
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 15,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle, // Make the container circular
+                      border: Border.all(
+                        color: Colors.grey, // Border color
+                        width: 1.5, // Border width
+                      ),
+                    ),
+                    child: const CircleAvatar(
+                      maxRadius: 25,
+                      backgroundColor: Colors.white,
+                      backgroundImage: AssetImage(
+                        "assets/images/google_icon.jpg",
+                      ),
                     ),
                   ),
                   const SizedBox(

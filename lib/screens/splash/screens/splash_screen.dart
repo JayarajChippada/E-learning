@@ -1,7 +1,5 @@
 import 'dart:async';
-
-import 'package:e_learning/main.dart';
-import 'package:e_learning/welcome_screens/screens/welcome_screen.dart';
+import '../../welcome/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -14,14 +12,10 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     Timer(
         const Duration(seconds: 3),
-        () => Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-                builder: (context) => WelcomeScreen())));
+        () => Navigator.pushReplacementNamed(context, WelcomeScreen.routeName));
   }
 
   @override
@@ -30,9 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        decoration:const BoxDecoration(
-          color: Colors.white
-        ),
+        decoration: const BoxDecoration(color: Colors.white),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -43,8 +35,6 @@ class _SplashScreenState extends State<SplashScreen> {
                 width: 300,
               ),
             ),
-
-
             const CircularProgressIndicator(
               valueColor: AlwaysStoppedAnimation<Color>(Colors.orange),
             ),

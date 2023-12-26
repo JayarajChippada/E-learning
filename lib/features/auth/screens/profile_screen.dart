@@ -1,12 +1,13 @@
-import 'package:e_learning/authentication/screens/signup_screen.dart';
+import 'package:e_learning/features/auth/screens/signup_screen.dart';
 import 'package:e_learning/features/home/widgets/bottombar.dart';
 import 'package:flutter/material.dart';
 
-import '../../welcome_screens/widgets/button.dart';
-import '../../welcome_screens/widgets/circlur_button.dart';
+import '../../../screens/welcome/widgets/button.dart';
+import '../../../screens/welcome/widgets/circlur_button.dart';
 import '../widgets/textfield.dart';
 
 class ProfileEditingScreen extends StatefulWidget {
+  static const String routeName = '/profile-screen';
   const ProfileEditingScreen({super.key});
 
   @override

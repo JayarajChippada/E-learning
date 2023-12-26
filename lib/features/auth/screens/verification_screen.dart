@@ -1,10 +1,11 @@
-import 'package:e_learning/authentication/screens/signup_screen.dart';
-import 'package:e_learning/welcome_screens/widgets/circlur_button.dart';
+import 'package:e_learning/features/auth/screens/signup_screen.dart';
+import 'package:e_learning/screens/welcome/widgets/circlur_button.dart';
 import 'package:flutter/material.dart';
 
-import '../../welcome_screens/widgets/button.dart';
+import '../../../screens/welcome/widgets/button.dart';
 
 class VerificationScreen extends StatefulWidget {
+  static const String routeName = '/verification-screen';
   const VerificationScreen({super.key});
 
   @override
@@ -46,14 +47,15 @@ class _VerificationScreenState extends State<VerificationScreen> {
             margin: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               children: [
-                
                 const SizedBox(
                   height: 30,
                 ),
                 const Text(
                   "Verify Code",
                   style: TextStyle(
-                      fontSize: 30, fontWeight: FontWeight.bold, color: Colors.black),
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
                 ),
                 const SizedBox(
                   height: 10,
@@ -61,12 +63,16 @@ class _VerificationScreenState extends State<VerificationScreen> {
                 const Text(
                   "please enter the code we just sent to the mail",
                   style: TextStyle(
-                      fontSize: 16, fontWeight: FontWeight.w500, color: Colors.grey),
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.grey),
                 ),
                 const Text(
                   "example@email.com",
                   style: TextStyle(
-                      fontSize: 16, fontWeight: FontWeight.w500, color: Colors.blue),
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.blue),
                 ),
                 const SizedBox(
                   height: 50,
@@ -84,7 +90,8 @@ class _VerificationScreenState extends State<VerificationScreen> {
                       child: const Center(
                         child: Text(
                           "2",
-                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 18),
                         ),
                       ),
                     ),
@@ -98,7 +105,8 @@ class _VerificationScreenState extends State<VerificationScreen> {
                       child: const Center(
                         child: Text(
                           "5",
-                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 18),
                         ),
                       ),
                     ),
@@ -112,7 +120,8 @@ class _VerificationScreenState extends State<VerificationScreen> {
                       child: const Center(
                         child: Text(
                           "-",
-                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 18),
                         ),
                       ),
                     ),
@@ -126,7 +135,8 @@ class _VerificationScreenState extends State<VerificationScreen> {
                       child: const Center(
                         child: Text(
                           "-",
-                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 18),
                         ),
                       ),
                     ),
@@ -137,9 +147,12 @@ class _VerificationScreenState extends State<VerificationScreen> {
                 ),
                 const Text(
                   "Didn't receive OTP?",
-                  style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w500),
+                  style: TextStyle(
+                      color: Colors.grey, fontWeight: FontWeight.w500),
                 ),
-                const SizedBox(height: 5,),
+                const SizedBox(
+                  height: 5,
+                ),
                 GestureDetector(
                   onTap: () {},
                   child: const Text(
@@ -153,7 +166,9 @@ class _VerificationScreenState extends State<VerificationScreen> {
                         decorationThickness: 1.5),
                   ),
                 ),
-                const SizedBox(height: 30,),
+                const SizedBox(
+                  height: 30,
+                ),
                 MyButton(text: "Verify", callback: () {}),
               ],
             ),

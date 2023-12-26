@@ -1,16 +1,16 @@
 import 'package:e_learning/features/coursedetails/widgets/course_overview.dart';
 import 'package:e_learning/features/home/screens/home_screen.dart';
 import 'package:e_learning/features/home/widgets/bottombar.dart';
-import 'package:e_learning/welcome_screens/widgets/circlur_button.dart';
+import 'package:e_learning/screens/welcome/widgets/circlur_button.dart';
 import 'package:flutter/material.dart';
 import 'package:e_learning/features/home/widgets/card.dart';
 import 'package:e_learning/features/home/widgets/category.dart';
 import 'package:e_learning/features/home/widgets/course.dart';
 import 'package:e_learning/features/home/widgets/mentor.dart';
 import 'package:e_learning/features/home/widgets/search_bar.dart';
-import 'package:e_learning/pages/category_screen.dart';
+import 'package:e_learning/screens/category_screen.dart';
 
-import '../../../welcome_screens/widgets/button.dart';
+import '../../../screens/welcome/widgets/button.dart';
 
 class CourseDetailsScreen extends StatelessWidget {
   CourseDetailsScreen(

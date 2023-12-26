@@ -3,7 +3,7 @@ import 'package:e_learning/features/home/widgets/category.dart';
 import 'package:e_learning/features/home/widgets/course.dart';
 import 'package:e_learning/features/home/widgets/mentor.dart';
 import 'package:e_learning/features/home/widgets/search_bar.dart';
-import 'package:e_learning/pages/category_screen.dart';
+import 'package:e_learning/screens/category_screen.dart';
 import 'package:e_learning/features/coursedetails/screens/course_details_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -51,6 +51,7 @@ class HomeScreen extends StatelessWidget {
               margin: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   //const Spacer(),
                   const SizedBox(
@@ -59,9 +60,9 @@ class HomeScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Column(
+                      const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
+                        children: [
                           Text(
                             "Hi, Jayaraj \u{1F44B}",
                             style: TextStyle(
@@ -103,10 +104,14 @@ class HomeScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Expanded(child: SearchBar()),
-                      const SizedBox(
-                        width: 10,
-                      ),
+                      Flexible(
+                          child: Transform.scale(
+                        scale: 0.9,
+                        child: MySearchBar(
+                          text: "search",
+                        ),
+                      )),
+                      const SizedBox(width: 5,),
                       Container(
                         height: 50,
                         width: 50,
@@ -289,15 +294,16 @@ class HomeScreen extends StatelessWidget {
                       mentor: "Phil Ebiner",
                       ontap: () {
                         Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => CourseDetailsScreen(
-                        aboutCourse: '',
-                        imageUrl: '',
-                        label: '',
-                        mentor: '',
-                        title: '',
-                      ),)
-                        );
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => CourseDetailsScreen(
+                                aboutCourse: '',
+                                imageUrl: '',
+                                label: '',
+                                mentor: '',
+                                title: '',
+                              ),
+                            ));
                       },
                     ),
                   ),
